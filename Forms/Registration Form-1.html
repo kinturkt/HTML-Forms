@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Complete Registration Form </title>
+</head>
+<body>
+
+    <!-- form tag is imp. to make a HTML form & should include the whole table-->
+    <form name="employment" action="send.php" method="post">         
+        
+        <table width="75%" border="1" cellspacing="2" cellpadding="2">       <!-- Table size is (2,9) -->
+        <tr>
+            <td>Employment Application</td>
+            <td></td>
+        </tr>
+        <tr>
+            <!-- The default width of text input fields is 20 characters -->
+            
+            <td>First Name</td>
+            <td> <input type="text" name="fname" maxlength="50" /> </td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td> <input type="text" name="lname" maxlength="50" /> </td>
+        </tr>
+        <tr>
+            <td>Position</td>
+            <td>
+                
+                <select name="position">      <!-- attribute name is given here & it is imp.We are also creating 4 options for position.-->
+
+                    <option value="AC"> Accountant </option>      <!--value attribue indicates that only 2 characters which are stored in our database when passed to PHP script.-->     
+                    <option value="RE"> Receptionist </option>
+                    <option value="AD"> Administrator </option>
+                    <option value="SU"> Supervisor </option>
+
+                </select>
+
+            </td>
+        </tr>
+        <tr>
+            <td>Experience Level</td>
+            <td>
+
+                <select name="position">
+                    <option value="EL"> Entry Level </option>
+                    <option value="EL"> Less Experienced </option>
+                    <option value="ML"> More Experienced </option>
+
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Job Type</td>
+            <td> 
+                
+                <!-- Checkbox attribute can select multiple options. And here we have given 3 checkboxes with 3 different names. -->
+                <input type="checkbox" name="ft" /> Full-Time
+                <input type="checkbox" name="pt" /> Part-Time 
+                <input type="checkbox" name="ct" /> Contract
+            
+            </td>
+        </tr>
+        <tr>
+            <td>Employment Status</td>
+            <td>
+
+                <!-- Radio Buttons attribute can select only a single option. Here,name of all radio buttons is same & is known as radio group. -->
+                <input type="radio" name="estatus" value="employed" /> Employed
+                <input type="radio" name="estatus" value="unemployed" /> Unemployed
+                <input type="radio" name="estatus" value="student" /> Student
+
+            </td>
+        </tr>
+        <tr>
+            <td>Additional Comments</td>
+            <td>
+
+                <!-- beyond 5 rows, scroll bars will appear automatically in this field. This field is expandable. -->
+                <textarea name="comments" cols="45" rows="5"> </textarea>  
+
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+
+                <input type="submit" name="submit" value="Submit" />      <!--Submit: It will Submit the data to PHP script.-->
+                <input type="reset" name="reset" value="Reset" />         <!--Reset: It will clear the data of Comments field.-->
+
+            </td>
+        </tr>
+        </table>
+
+    </form>
+
+</body>
+</html>
